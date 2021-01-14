@@ -1,0 +1,164 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family:'Trebuchet MS';
+}
+body{
+    background:hsl(81, 77%, 41%);
+}
+header{
+    background:hsla(165, 100%, 25%,0.7);
+    padding: 10px 0 10px 0;
+}
+header>p{
+    font:400 2em 'Trebuchet MS';
+    color:#fff;
+    display:inline-block;
+}
+header>img{
+    width:50px;
+    margin: 0 20px 0 20px;
+    padding:5px;
+    background:#fff;
+    border-radius:50%;
+}
+a{
+    color:#fff;
+}
+#retour{
+    border:1px dashed hsl(70, 100%, 40%);
+    background:hsl(65, 100%, 41%);
+    position:absolute;
+    left:-60px;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+}
+#retour:before{
+    content:"\21A9";
+    color:hsl(102, 54%, 6%);
+    font-size: 2em;
+}
+#boite{
+    padding:10px;
+    background:hsl(137, 55%, 37%);
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*height:30%;*/
+    width:60%;
+    display:flex;
+    flex-direction:column;
+}
+#r2{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+#r2c2{
+    width:25%;
+}
+#r1c1{
+    display:flex;
+    flex-direction:column;
+}
+.titre-question::before{
+    content:"Question ";
+}
+#btn1, #btn2{
+    font-size:1.5em;
+    display:block;
+    margin:0.5em auto 1em auto;
+    padding:0 10% 0 10%;
+    background:#fff;
+    border:2px solid hsl(81, 77%, 41%);
+    color:hsl(102, 54%, 12%);
+    cursor:pointer;
+}
+#btn1:hover, #btn2:hover{
+    background:hsl(81, 77%, 41%);
+    color:#fff;
+}
+#btn1::before,#btn2::before{
+    content:"Aller à: "; 
+}
+#titre{
+    font-size: 24px;
+    margin-bottom:1.5em;
+    color:white;
+}
+#contenu{
+    margin-right:0.5em;
+    font-size:1.5em;
+    line-height:1.5em;
+    color:#fff;
+    width:70%;
+}
+#image{
+    z-index:99;
+}
+#texte{
+    padding-right:2em;
+    padding-left:2em;
+}
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+#modal-header {
+    background:hsl(101, 55%, 42%);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display:flex;
+    justify-content:space-between;
+}
+
+#modal-body {
+    padding: 10px 20px;
+    background: #fff;
+}
+
+#modal-footer {
+    background:hsl(101, 55%, 42%);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#close {
+    color: #ccc;
+    font-size: 30px;
+    color: #fff;
+}
+
+#close:hover, #close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
