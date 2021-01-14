@@ -23,8 +23,16 @@ header>img{
     background:#fff;
     border-radius:50%;
 }
+footer{
+    color:#fff;
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-size:1.5em;
+}
 a{
     color:#fff;
+    font-size:1.25em;
 }
 #retour{
     border:1px dashed hsl(70, 100%, 40%);

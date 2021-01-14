@@ -58,4 +58,9 @@ window.addEventListener("click", (e)=>{
     if(e.target == fenetre){
         fenetre.style.display = "none";
     }
-})
+});
+window.addEventListener("keydown",(e)=>{
+    if(e.keyCode == 27){
+        fenetre.style.display = "none";
+    }
+});
